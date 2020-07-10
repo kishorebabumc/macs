@@ -3,7 +3,7 @@
 	$macs = mysqli_query($connection,"SELECT name FROM master");
 	$macs = mysqli_fetch_assoc($macs);
 	$macs = $macs['name'];
-	$today = date("Y-m-d");
+	$today = date("Y-m-d");  
 ?>
 <html lang="en">
 	<head>
@@ -63,7 +63,7 @@
 		// Update the count down every 1 second
 		var x = setInterval(function timer() {
 
-			// Get todays date and time
+			// Get todays date and time        //* original code
 			
 			
 			// Find the distance between now an the count down date
@@ -78,11 +78,12 @@
 			   document.getElementById("session").innerHTML = "Session Expires in " +  minutes + "m " + seconds + "s " ;			  
 			// If the count down is over, write some text 
 			if(distance < 1000 * 60 * 5){
-				// confirm("Your Session will expire in 5 minutes. Do you want extend");
+				 //confirm("Your Session will expire in 5 minutes. Do you want extend");
 			}
 			
 		}, 1000);		
 	</script>
+   
 		<!--[if lte IE 8]>
 		<script src="assets/js/html5shiv.min.js"></script>
 		<script src="assets/js/respond.min.js"></script>
@@ -225,7 +226,7 @@
 					<li <?php if($_SESSION['curpage']=="admin_cluster"){echo "class = 'active'";} ?>>
 						<a href="admin_cluster.php">
 							<i class="menu-icon fa fa-circle"></i>
-							<span class="menu-text"> Cluster </span>
+							<span class="menu-text"> Clusters </span>
 						</a>
 						<b class="arrow"></b>
 					</li>
@@ -233,7 +234,7 @@
 					<li <?php if($_SESSION['curpage']=="admin_group"){echo "class = 'active'";} ?>>
 						<a href="admin_group.php">
 							<i class="menu-icon fa fa-users"></i>
-							<span class="menu-text"> Group </span>
+							<span class="menu-text"> Groups </span>
 						</a>
 						<b class="arrow"></b>
 						

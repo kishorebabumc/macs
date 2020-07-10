@@ -151,7 +151,7 @@
 								</li>
 
 								<li>
-									<a href="profile.html">
+									<a href="">
 										<i class="ace-icon fa fa-user"></i>
 										Profile
 									</a>
@@ -215,7 +215,7 @@
 				<ul class="nav nav-list">
 				    
 					<li <?php if($_SESSION['curpage']=="employee"){echo "class = 'active'";} ?>>
-						<a href="clerk.php">
+						<a href="employee.php">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> Dashboard </span>
 						</a>
@@ -223,16 +223,16 @@
 						<b class="arrow"></b>
 					</li>					
 
-					<li <?php if($_SESSION['curpage']=="accounts_ddo"){echo "class = 'active'";} ?>>
-						<a href="accounts_ddo.php">
+					<li <?php if($_SESSION['curpage']=="emp_member"){echo "class = 'active'";} ?>>
+						<a href="emp_member.php">
 							<i class="menu-icon fa fa-user"></i>
 							<span class="menu-text"> Members </span>
 						</a>
 						<b class="arrow"></b>
 					</li>
 
-					<li <?php if($_SESSION['curpage']=="accounts_member"){echo "class = 'active'";} ?>>
-						<a href="accounts_member.php">
+					<li <?php if($_SESSION['curpage']=="emp_group"){echo "class = 'active'";} ?>>
+						<a href="emp_group.php">
 							<i class="menu-icon fa fa-users"></i>
 							<span class="menu-text"> Groups </span>
 						</a>
@@ -240,8 +240,8 @@
 						
 					</li>
 					
-					<li <?php if($_SESSION['curpage']=="accounts_hoa"){echo "class = 'active'";} ?>>
-						<a href="accounts_hoa.php">
+					<li <?php if($_SESSION['curpage']=="emp_cashtr"){echo "class = 'active'";} ?>>
+						<a href="emp_cashtr.php">
 							<i class="menu-icon fa fa-inr"></i>
 							<span class="menu-text"> Cash Transfer </span>
 						</a>
@@ -249,15 +249,15 @@
 						
 					</li>
 					
-					<li <?php if($_SESSION['curpage']=="accounts_ledgersetup"){echo "class = 'active'";} ?>>
-						<a href="accounts_ledgersetup.php">
+					<li <?php if($_SESSION['curpage']=="emp_cashbook"){echo "class = 'active'";} ?>>
+						<a href="emp_cashbook.php">
 							<i class="menu-icon fa fa-calculator"></i>
 							<span class="menu-text"> Cash Book </span>
 						</a>
 						<b class="arrow"></b>						
 					</li>
 					
-					<li <?php if($_SESSION['curpage']=="accounts_newaccount" || $_SESSION['curpage']=="accounts_viewaccount" || $_SESSION['curpage']=="accounts_statement" ){echo "class = 'open'";} ?>>
+					<li <?php if($_SESSION['curpage']=="emp_rep_cb" || $_SESSION['curpage']=="emp_rep_rp" || $_SESSION['curpage']=="emp_rep_gl" ){echo "class = 'open'";} ?>>
 						<a href="" class="dropdown-toggle">
 							<i class="menu-icon fa fa-bar-chart"></i>
 							<span class="menu-text"> Reports </span>
@@ -268,26 +268,26 @@
 						<b class="arrow"></b>
 
 						<ul class="submenu">
-							<li <?php if($_SESSION['curpage']=="accounts_newaccount"){echo "class = 'active'";} ?>>
-								<a href="accounts_newaccount.php">
-									<i class="menu-icon fa fa-arrow-left"></i>
+							<li <?php if($_SESSION['curpage']=="emp_rep_cb"){echo "class = 'active'";} ?>>
+								<a href="emp_rep_cb.php">
+									<i class="menu-icon"></i>
 									Cash Book
 								</a>
 
 								<b class="arrow"></b>
 							</li>
-							<li <?php if($_SESSION['curpage']=="accounts_viewaccount"){echo "class = 'active'";} ?>>
-								<a href="accounts_viewaccount.php">
-									<i class="menu-icon fa fa-history"></i>
+							<li <?php if($_SESSION['curpage']=="emp_rep_rp"){echo "class = 'active'";} ?>>
+								<a href="emp_rep_rp.php">
+									<i class="menu-icon"></i>
 									Receipts & Payments
 								</a>
 
 								<b class="arrow"></b>
 							</li>
 							
-							<li <?php if($_SESSION['curpage']=="accounts_statement"){echo "class = 'active'";} ?>>
-								<a href="accounts_statement.php">
-									<i class="menu-icon fa fa-caret-right"></i>
+							<li <?php if($_SESSION['curpage']=="emp_rep_gl"){echo "class = 'active'";} ?>>
+								<a href="emp_rep_gl.php">
+									<i class="menu-icon"></i>
 									Ledger
 								</a>
 
@@ -299,16 +299,16 @@
 					
 					
 					
-					<li <?php if($_SESSION['curpage']=="accounts_profit"){echo "class = 'active'";} ?>>
-						<a href="accounts_profit.php">
+					<li <?php if($_SESSION['curpage']=="emp_backdated"){echo "class = 'active'";} ?>>
+						<a href="emp_backdated.php">
 							<i class="menu-icon fa fa-arrow-left"></i>
 							<span class="menu-text"> Back Date </span>
 						</a>
 						<b class="arrow"></b>						
 					</li>
           
-          <li <?php if($_SESSION['curpage']=="accounts_profit"){echo "class = 'active'";} ?>>
-						<a href="accounts_profit.php">
+          <li <?php if($_SESSION['curpage']=="emp_ob"){echo "class = 'active'";} ?>>
+						<a href="emp_ob.php">
 							<i class="menu-icon fa fa-history"></i>
 							<span class="menu-text"> Opening Balances </span>
 						</a>

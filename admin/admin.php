@@ -9,8 +9,8 @@
 	$cashapproval = $connection->query("SELECT cluster.ClusterName, acc_cash_dummy_transfer.* FROM cluster, acc_cash_dummy_transfer WHERE acc_cash_dummy_transfer.clusterid = cluster.ClusterID AND acc_cash_dummy_transfer.clusterid = 'C100' AND acc_cash_dummy_transfer.status = 0");	
 	
 	$openingbalance = $connection->query("SELECT sum(receiptcash) as receipt, sum(paymentcash) as payment FROM acc_cashbook, acc_transactions WHERE clusterid = 'C100' AND acc_cashbook.TransID = acc_transactions.TransID AND acc_transactions.TransStatus = 1 AND acc_cashbook.date < '$today'");
-	$opbal = $openingbalance->fetch_assoc();
-	$receipt = $opbal['receipt'];
+	$opbal = $openingbalance->fetch_assoc();	
+  $receipt = $opbal['receipt'];
 	$payment = $opbal['payment'];
 	$opening = $receipt - $payment;
 
